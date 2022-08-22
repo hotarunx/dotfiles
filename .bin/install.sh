@@ -74,6 +74,9 @@ git config --global include.path "~/.gitconfig_shared"
 command echo -e "\e[1;36m Install completed!!!! \e[m"
 # https://github.com/yutkat/dotfiles/blob/main/LICENSE
 
+source ~/.zshenv
+source ~/.zshrc
+
 # dotfilesの管理を楽にする話 https://zenn.dev/tkomatsu/articles/d7d089acd29cfa4d57b4
 echo "installing Homebrew ..."
 which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
