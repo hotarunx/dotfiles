@@ -100,3 +100,4 @@ brew cleanup
 # dotfilesの管理を楽にする話 https://zenn.dev/tkomatsu/articles/d7d089acd29cfa4d57b4
 
 which zimfw >/dev/null 2>&1 && curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+zimfw install
