@@ -89,6 +89,9 @@ if [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     brew install gcc
     sudo apt install zsh
     chsh -s /bin/zsh
+
+    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+    bash Miniforge3-Linux-x86_64.sh
 fi
 
 # dotfilesの管理を楽にする話 https://zenn.dev/tkomatsu/articles/d7d089acd29cfa4d57b4
@@ -104,3 +107,8 @@ brew cleanup
 
 which zimfw >/dev/null 2>&1 && curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 zimfw install
+
+pip install online-judge-template-generator
+pip install online-judge-verify-helper
+pip install online-judge-tools
+pip install yapf
