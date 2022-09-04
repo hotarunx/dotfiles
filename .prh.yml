@@ -1,0 +1,10 @@
+version: 1
+rules:
+  - expected: textlint
+    patterns: TextLint
+  - expected: 、
+    pattern:
+      - ，
+  - expected: 。
+    pattern:
+      - ．

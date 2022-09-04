@@ -58,4 +58,4 @@ zmodule exa
 zmodule fzf
 zmodule olets/zsh-abbr
 zmodule homebrew
-zmodule eriner
+zmodule romkatv/powerlevel10k --use degit
