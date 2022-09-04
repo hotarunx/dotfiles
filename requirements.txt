@@ -1,5 +1,8 @@
-online-judge-api-client==10.10.1
-online-judge-template-generator==4.8.1
-online-judge-tools==11.5.1
-online-judge-verify-helper==5.6.0
-yapf==0.32.0
+online-judge-api-client
+online-judge-template-generator
+online-judge-tools
+online-judge-verify-helper
+yapf
+black
+flake8
+mypy
