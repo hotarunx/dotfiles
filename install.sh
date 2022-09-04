@@ -47,7 +47,7 @@ echo "Installing zimfw"
 test -e $HOME/.zim >/dev/null 2>&1 || curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
 echo "Installing PIP packages"
-pip3 install -r requirements.txt
+pip3 install -U -r requirements.txt
 
 echo "Installing n, Node.js, npm and npm packages by n"
 # make cache folder (if missing) and take ownership
