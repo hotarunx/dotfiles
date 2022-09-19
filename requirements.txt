@@ -6,3 +6,4 @@ yapf
 black
 flake8
 mypy
+beautifulsoup4

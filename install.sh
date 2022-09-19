@@ -28,7 +28,7 @@ if [ "$(is_os)" == "Linux" ]; then
     sudo apt upgrade -y
     if which zsh >/dev/null 2>&1; then
         echo "installing zsh gcc build-essential"
-        sudo apt install zsh gcc build-essential -y
+        sudo apt install zsh gcc build-essential xdg-utils -y
     fi
     chsh -s /bin/zsh
 fi
