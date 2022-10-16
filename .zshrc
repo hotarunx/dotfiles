@@ -21,14 +21,37 @@ if [[ $(command -v exa) ]]; then
     alias ltl='exa -T -L 3 -a -I "node_modules|.git|.cache" -l --icons'
 fi
 
-# ssh
-if [[ $(command -v ssh) ]]; then
-    alias ssh='source $HOME/.keychain/$HOST-sh; ssh'
-fi
-
 alias python="python3"
 alias pip="pip3"
 alias gc="git clone"
 
+alias gc="git clone"
+alias ps1="powershell.exe"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+autoload -Uz compinit
+compinit
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+# コマンド履歴
+HISTSIZE=6000000
+SAVEHIST=6000000
+setopt hist_ignore_dups
+setopt share_history
+setopt auto_pushd
+setopt correct
+setopt list_packed
+
+# fzfで捗る自作コマンド一覧(zsh) - ハイパーマッスルエンジニア
+# https://www.rasukarusan.com/entry/2018/08/14/083000
+# fzf-cdr
+alias cdd='fzf-cdr'
+function fzf-cdr() {
+    target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf`
+    target_dir=`echo ${target_dir/\~/$HOME}`
+    if [ -n "$target_dir" ]; then
+        cd $target_dir
+    fi
+}

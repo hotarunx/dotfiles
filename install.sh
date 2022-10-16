@@ -28,7 +28,7 @@ if [ "$(is_os)" == "Linux" ]; then
     sudo apt upgrade -y
     if which zsh >/dev/null 2>&1; then
         echo "installing zsh gcc build-essential"
-        sudo apt install zsh gcc build-essential xdg-utils -y
+        sudo apt install zsh gcc build-essential xdg-utils gdb -y
     fi
     chsh -s /bin/zsh
 fi
@@ -59,7 +59,7 @@ sudo mkdir -p /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
 sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
 n latest
 
-npm install -g npm typescript eslint gimonfu npm textlint-filter-rule-comments textlint-rule-ja-space-around-link textlint-rule-preset-ja-spacing textlint-rule-preset-ja-technical-writing textlint-rule-preset-japanese textlint-rule-preset-jtf-style textlint-rule-prh textlint-rule-spellcheck-tech-word textlint
+npm install -g npm typescript eslint gimonfu npm @vue/cli textlint-filter-rule-comments textlint-rule-ja-space-around-link textlint-rule-preset-ja-spacing textlint-rule-preset-ja-technical-writing textlint-rule-preset-japanese textlint-rule-preset-jtf-style textlint-rule-prh textlint-rule-spellcheck-tech-word textlint
 
 echo "dotfiles Installation is finished."
 echo "Please restart terminal."
