@@ -30,7 +30,9 @@ if [ "$(is_os)" == "Linux" ]; then
         echo "installing zsh gcc build-essential"
         sudo apt install zsh gcc build-essential xdg-utils gdb -y
     fi
-    chsh -s /bin/zsh
+    if [ "$(echo $SHELL)" != "/bin/zsh" ]; then
+        chsh -s /bin/zsh
+    fi
 fi
 
 echo "Installing Homebrew"
