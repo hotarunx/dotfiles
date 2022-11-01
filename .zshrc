@@ -63,7 +63,7 @@ function fzf-cdr() {
   zle redisplay
 }
 zle -N fzf-cdr
-bindkey '^u' fzf-cdr
+bindkey '^t' fzf-cdr
 
 # シェルのコマンド履歴をインクリメンタルサーチで検索して素早く再利用する方法
 # https://mogulla3.tech/articles/2021-09-06-search-command-history-with-incremental-search
