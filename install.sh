@@ -26,6 +26,7 @@ if [ "$(is_os)" == "Linux" ]; then
     sudo sed -i -e 's|archive.ubuntu.com|ubuntutym.u-toyama.ac.jp|g' /etc/apt/sources.list
     sudo apt update -y
     sudo apt upgrade -y
+    sudo apt autoremove -y
     if which zsh >/dev/null 2>&1; then
         echo "installing zsh gcc build-essential"
         sudo apt install zsh gcc build-essential xdg-utils gdb -y
@@ -44,9 +45,6 @@ brew update
 brew upgrade
 brew bundle
 brew cleanup
-
-echo "Installing zimfw"
-test -e $HOME/.zim >/dev/null 2>&1 || curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
 echo "Installing PIP packages"
 pip3 install -U -r requirements.txt
