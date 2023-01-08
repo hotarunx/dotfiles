@@ -51,7 +51,10 @@ pip3 install -U -r requirements.txt
 
 echo "Installing n, Node.js, npm and npm packages by n"
 n latest
-npm install -g npm typescript eslint gimonfu npm @vue/cli textlint textlint-filter-rule-comments textlint-rule-ja-space-around-link textlint-rule-preset-ja-spacing textlint-rule-preset-ja-technical-writing textlint-rule-preset-japanese textlint-rule-preset-jtf-style textlint-rule-prh textlint-rule-spellcheck-tech-word textlint
+npm install -g npm
+npm install -g typescript eslint @vue/cli
+npm install -g textlint textlint-filter-rule-comments textlint-rule-ja-space-around-link textlint-rule-preset-ja-spacing textlint-rule-preset-ja-technical-writing textlint-rule-preset-japanese textlint-rule-preset-jtf-style textlint-rule-prh textlint-rule-spellcheck-tech-word
+npm install -g gimonfu
 
 echo "dotfiles Installation is finished."
 echo "Please restart terminal."
